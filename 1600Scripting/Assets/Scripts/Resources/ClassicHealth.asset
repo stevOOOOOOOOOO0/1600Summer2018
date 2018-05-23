@@ -8,10 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6428cd872cff584d80a70e76c90168e, type: 3}
-  m_Name: Horse
+  m_Script: {fileID: 11500000, guid: e6321fe829a64324f9c114b7a239fcdd, type: 3}
+  m_Name: ClassicHealth
   m_EditorClassIdentifier: 
-  Health: 1
-  Speed: 1
-  Strength: 1
-  LegCount: 2
+  PowerLevel: 6.05
