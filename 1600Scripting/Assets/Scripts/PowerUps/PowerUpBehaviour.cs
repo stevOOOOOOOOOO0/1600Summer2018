@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUpBehaviour : MonoBehaviour {
 
     public PowerUpBase PowerUp;
-    float rotateAngle = 0;
+   bool displayed = false;
 
     private void OnMouseDown()
     {
@@ -14,15 +14,9 @@ public class PowerUpBehaviour : MonoBehaviour {
 
    void Update()
    {
-      if (PowerUp.PowerLevel == 10)
+      if (!displayed && PowerUp.PowerLevel == 10)
       {
-         if (transform.position.y > .5)
-         {
-            transform.Rotate(0, rotateAngle, 0);
-            rotateAngle = rotateAngle + 0.5f;
-         }
-         else
-            rotateAngle = 0;
+         print("IT'S OVER 9000!");
       }
    }
 
