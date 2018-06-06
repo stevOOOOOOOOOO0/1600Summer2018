@@ -9,9 +9,10 @@ public class PlayerTrigger : MonoBehaviour {
     public FloatData EvilPower;
 
 	// Use this for initialization
-	void Start () {
-
-    }
+	void Start ()
+	{
+		HealthLevel.Value = 1;
+	}
 	
 	// Update is called once per frame
 	void OnTriggerEnter () {
