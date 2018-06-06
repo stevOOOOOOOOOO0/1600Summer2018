@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpBase : ScriptableObject {
-    [Range(0,10)] public float PowerLevel = 0f;
 
-    private void OnEnable()
-    {
-        Debug.Log("PowerUp");
+    public Animal AnyAnimal;
+    public float PowerLevel = 1.0f;
+
+    public void RunPowerUp() {
+        AnyAnimal.Health += PowerLevel;
     }
 }

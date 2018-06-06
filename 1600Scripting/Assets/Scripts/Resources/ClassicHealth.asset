@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6321fe829a64324f9c114b7a239fcdd, type: 3}
   m_Name: ClassicHealth
   m_EditorClassIdentifier: 
-  PowerLevel: 6.05
+  AnyAnimal: {fileID: 11400000, guid: 75a17c4d13313dc42a8c241ad1d94841, type: 2}
+  PowerLevel: 1
