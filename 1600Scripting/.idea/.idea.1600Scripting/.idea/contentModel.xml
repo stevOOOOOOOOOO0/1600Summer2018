@@ -30,6 +30,7 @@
             <e p="PowerUpBase.cs" t="Include" />
             <e p="PowerUpBehaviour.cs" t="Include" />
           </e>
+          <e p="WallMovement.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
