@@ -5,24 +5,27 @@ using UnityEngine;
 public class WallMovement : MonoBehaviour {
 
 	private CharacterController controller;
-	private float speed = 10.0f;
+	public FloatData InitialSpeed;
+	private float speed;
 	private Vector3 position;
-	public float count = 0f;
+	public float Count;
+	public FloatData CountLength;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		controller = GetComponent<CharacterController>();
+		speed = InitialSpeed.Value;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		count += Time.deltaTime;
-		if (count >= 1.15)
+		Count += Time.deltaTime;
+		if (Count >= CountLength.Value)
 		{
 			speed = speed * -1;
-			count = 0;
+			Count = 0;
 		}
 		position.x = speed * Time.deltaTime;
 		controller.Move(position);
