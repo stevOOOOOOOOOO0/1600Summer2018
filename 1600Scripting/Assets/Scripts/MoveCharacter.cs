@@ -21,7 +21,7 @@ public class MoveCharacter : MonoBehaviour {
 	{
 		// this is the Jump section y axiz
 		if (Input.GetAxis("Jump") != 0f && controller.isGrounded)
-			newPosition.y = (Input.GetAxis("Jump") * 30);
+			newPosition.y = (Input.GetAxis("Jump") * 50);
 		else if (controller.isGrounded == false)
 			newPosition.y += gravity;
 		else
