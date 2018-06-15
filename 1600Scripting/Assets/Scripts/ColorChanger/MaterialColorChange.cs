@@ -5,6 +5,11 @@ public class MaterialColorChange : MonoBehaviour {
 	private Color colorStart;
 	private Color colorEnd;
 	private Renderer rend;
+	private int red = 0;
+	private int green = 0;
+	private int blue = 0;
+	private int count = 0;
+	private int RGB = 0;
 
 	/*********************************
 	* Use this for initialization
@@ -12,10 +17,8 @@ public class MaterialColorChange : MonoBehaviour {
 	void Start ()
 	{
 		rend = GetComponent<Renderer>();
-		colorStart = rend.material.color;
-		//constructing the End Color through random numbers
-		colorEnd = new Color(Random.Range(0.0f, 255.0f), Random.Range(0.0f, 255.0f), Random.Range(0.0f, 255.0f), 255);
-//		Debug.Log(colorEnd);
+		//constructing the Start color set to red
+		colorStart = new Color(255, 0, 0, 255);
 	}
 	
 	/*************************************
@@ -23,11 +26,30 @@ public class MaterialColorChange : MonoBehaviour {
 	*************************************/
 	void Update ()
 	{
-		float lerp = Mathf.PingPong(Time.time, 1.0f);
-		rend.material.color = Color.Lerp(colorStart, Color.blue, lerp);
-//		Debug.Log("colorStart: ");
-//		Debug.Log(colorStart);
-//		Debug.Log("colorEnd: ");
-//		Debug.Log(colorEnd);
+		if (RGB == 0)
+			green += 5;
+		else if (RGB == 1)
+			red -= 5;
+		else if (RGB == 2)
+			blue += 5;
+		else if (RGB == 3)
+			green -= 5;
+		else if (RGB == 4)
+			red += 5;
+		else if (RGB ==5)
+			blue -= 5;
+
+		count += 5;
+		colorStart = new Color(red, green, blue, 255);
+		rend.material.color = colorStart;
+		
+		/************************************
+		 * resets numbers that need reseting
+		 ***********************************/
+		if (count == 255)
+		{
+			count = 0;
+			RGB = (RGB + 1) % 6;
+		}
 	}
 }
