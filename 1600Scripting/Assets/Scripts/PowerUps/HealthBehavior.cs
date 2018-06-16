@@ -9,12 +9,14 @@ public class HealthBehavior : MonoBehaviour {
     private Image HealthImage;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
         HealthImage = GetComponent<Image>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        HealthImage.fillAmount = HealthLevel.Value;
+	void Update () 
+	{
+        HealthImage.fillAmount = HealthLevel.GetValue();
 	}
 }

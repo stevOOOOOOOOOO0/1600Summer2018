@@ -9,7 +9,7 @@ public class MoveCharacter : MonoBehaviour {
     private CharacterController controller;
 	private Vector3 newPosition;
 	public float Speed = 10.0f;
-	private float gravity = -3.0f;
+	private float gravity = -2.0f;
     
 	// Use this for initialization
 	void Start () {

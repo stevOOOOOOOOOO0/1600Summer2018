@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class PlayerTrigger : MonoBehaviour {
     
     public FloatData HealthLevel;
-    public FloatData EvilPower;
-
 	// Use this for initialization
 	void Start ()
 	{
-		HealthLevel.Value = 1;
+		HealthLevel.SetValue(1.0f);
 	}
 	
 	// Update is called once per frame
-	void OnTriggerEnter () {
-        HealthLevel.Value -= EvilPower.Value;
+	private void OnCollisionEnter()
+	{
+		HealthLevel.SubValue(.1f);
+		Debug.Log(HealthLevel.GetValue());
 	}
 }

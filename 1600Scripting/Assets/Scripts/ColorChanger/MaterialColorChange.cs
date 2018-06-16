@@ -52,7 +52,6 @@ public class MaterialColorChange : MonoBehaviour {
 		{
 			count = 0;
 			RGB = (RGB + 1) % 6;
-			Debug.Log(colorStart);
 		}
 	}
 }
