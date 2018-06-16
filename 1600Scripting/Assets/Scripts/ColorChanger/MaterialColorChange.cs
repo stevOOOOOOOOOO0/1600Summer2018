@@ -4,21 +4,19 @@ public class MaterialColorChange : MonoBehaviour {
 	
 	private Color colorStart;
 	private Color colorEnd;
-	private Renderer rend;
-	private int red = 0;
-	private int green = 0;
-	private int blue = 0;
-	private int count = 0;
-	private int RGB = 0;
+	private Material mat;
+	private float red = 1;
+	private float green;
+	private float blue;
+	private int count;
+	private int RGB;
 
 	/*********************************
 	* Use this for initialization
 	*********************************/
 	void Start ()
 	{
-		rend = GetComponent<Renderer>();
-		//constructing the Start color set to red
-		colorStart = new Color(255, 0, 0, 255);
+		mat = GetComponent<Renderer>().material;
 	}
 	
 	/*************************************
@@ -26,22 +24,26 @@ public class MaterialColorChange : MonoBehaviour {
 	*************************************/
 	void Update ()
 	{
+	
+	/************************************
+	* Basically a Switch to determine which color to increase or decrease
+	************************************/
 		if (RGB == 0)
-			green += 5;
+			green += .01960784313f;
 		else if (RGB == 1)
-			red -= 5;
+			red -= .01960784313f;
 		else if (RGB == 2)
-			blue += 5;
+			blue += .01960784313f;
 		else if (RGB == 3)
-			green -= 5;
+			green -= .01960784313f;
 		else if (RGB == 4)
-			red += 5;
-		else if (RGB ==5)
-			blue -= 5;
+			red += .01960784313f;
+		else if (RGB == 5)
+			blue -= .01960784313f;
 
 		count += 5;
 		colorStart = new Color(red, green, blue, 255);
-		rend.material.color = colorStart;
+		mat.color = colorStart;
 		
 		/************************************
 		 * resets numbers that need reseting
@@ -50,6 +52,7 @@ public class MaterialColorChange : MonoBehaviour {
 		{
 			count = 0;
 			RGB = (RGB + 1) % 6;
+			Debug.Log(colorStart);
 		}
 	}
 }
