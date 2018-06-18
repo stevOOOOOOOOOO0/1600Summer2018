@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class MaterialColorChange : MonoBehaviour {
 	
@@ -28,18 +29,28 @@ public class MaterialColorChange : MonoBehaviour {
 	/************************************
 	* Basically a Switch to determine which color to increase or decrease
 	************************************/
-		if (RGB == 0)
-			green += .01960784313f;
-		else if (RGB == 1)
-			red -= .01960784313f;
-		else if (RGB == 2)
-			blue += .01960784313f;
-		else if (RGB == 3)
-			green -= .01960784313f;
-		else if (RGB == 4)
-			red += .01960784313f;
-		else if (RGB == 5)
-			blue -= .01960784313f;
+
+		switch (RGB)
+		{
+			case 0:
+				green += .01960784313f;
+				break;
+			case 1:
+				red -= .01960784313f;
+				break;
+			case 2:
+				blue += .01960784313f;
+				break;
+			case 3:
+				green -= .01960784313f;
+				break;
+			case 4:
+				red += .01960784313f;
+				break;
+			case 5:
+				blue -= .01960784313f;
+				break;
+		}
 
 		count += 5;
 		colorStart = new Color(red, green, blue, 255);

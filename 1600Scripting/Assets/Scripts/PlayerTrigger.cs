@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class PlayerTrigger : MonoBehaviour {
     
     public FloatData HealthLevel;
+
 	// Use this for initialization
 	void Start ()
 	{
 		HealthLevel.SetValue(1.0f);
 	}
-	
-	// Update is called once per frame
-	private void OnCollisionEnter()
+
+	// OnTriggerEnter is called once per frame
+	private void OnTriggerEnter(Collider other)
 	{
 		HealthLevel.SubValue(.1f);
-		Debug.Log(HealthLevel.GetValue());
 	}
 }

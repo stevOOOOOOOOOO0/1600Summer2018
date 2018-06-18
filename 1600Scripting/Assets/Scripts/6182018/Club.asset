@@ -8,6 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98d923752f91f346b303092f8e6d894, type: 3}
-  m_Name: If Statements
+  m_Script: {fileID: 11500000, guid: b33e3fb5374651342bd74a02bf572b1c, type: 3}
+  m_Name: Club
   m_EditorClassIdentifier: 
+  Damagelevel: 2

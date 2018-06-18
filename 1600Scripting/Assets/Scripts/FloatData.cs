@@ -20,7 +20,7 @@ public class FloatData : ScriptableObject {
 
 	public void SubValue(float sub)
 	{
-		Value = -sub;
+		Value -= sub;
 	}
 	
 }
