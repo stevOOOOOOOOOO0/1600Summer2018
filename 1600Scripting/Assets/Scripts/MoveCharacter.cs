@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveCharacter : MonoBehaviour {
-
 	
 	// initilization of all variables
     private CharacterController controller;
@@ -21,7 +20,7 @@ public class MoveCharacter : MonoBehaviour {
 	{
 		// this is the Jump section y axiz
 		if (Input.GetAxis("Jump") != 0.0f && controller.isGrounded)
-			newPosition.y = (Input.GetAxis("Jump") * 40);
+			newPosition.y = (Input.GetAxis("Jump") * 20);
 		else if (controller.isGrounded == false)
 			newPosition.y += gravity;
 		else

@@ -21,6 +21,10 @@ public class FloatData : ScriptableObject {
 	public void SubValue(float sub)
 	{
 		Value -= sub;
+		
+	}public void AddValue(float add)
+	{
+		Value += add;
 	}
 	
 }

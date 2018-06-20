@@ -14,7 +14,7 @@ public class Weapons : MonoBehaviour {
 	}
 
 	public WeaponObject[] WeaponObjects = new WeaponObject[5];
-	public WeaponType CurrentWeapon;
+	public WeaponType CurrentWeapon = WeaponType.Axe;
 
 	void Update()
 	{
@@ -41,6 +41,11 @@ public class Weapons : MonoBehaviour {
 				Debug.Log(WeaponObjects[4].DoDamage());
 				break;
 		}
+	}
+
+	public WeaponType getWeaponType()
+	{
+		return CurrentWeapon;
 	}
 	
 }

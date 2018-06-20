@@ -16,6 +16,7 @@ public class PlayerTrigger : MonoBehaviour {
 	// OnTriggerEnter is called once per frame
 	private void OnTriggerEnter(Collider other)
 	{
-		HealthLevel.SubValue(.1f);
+		if (other.name != "Player")
+			HealthLevel.SubValue(.1f);
 	}
 }

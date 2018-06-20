@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44543308, g: 0.48949164, b: 0.543885, a: 1}
+  m_IndirectSpecularColor: {r: 0.44543254, g: 0.48949158, b: 0.5438842, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 25408524}
   - component: {fileID: 25408523}
   - component: {fileID: 25408527}
+  - component: {fileID: 25408528}
   m_Layer: 0
   m_Name: Wall (14)
   m_TagString: Untagged
@@ -218,6 +219,18 @@ MonoBehaviour:
   Count: 0
   Timer: {fileID: 11400000, guid: b2a14479a69f56a4cb9700c73d68d460, type: 2}
   Right: 0
+--- !u!65 &25408528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25408522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &139209091
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +413,7 @@ GameObject:
   - component: {fileID: 254019218}
   - component: {fileID: 254019216}
   - component: {fileID: 254019215}
+  - component: {fileID: 254019217}
   m_Layer: 0
   m_Name: Moving Wall
   m_TagString: Untagged
@@ -437,6 +451,18 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &254019217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254019214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &254019218
 MeshRenderer:
@@ -505,6 +531,7 @@ GameObject:
   - component: {fileID: 308530915}
   - component: {fileID: 308530914}
   - component: {fileID: 308530913}
+  - component: {fileID: 308530918}
   m_Layer: 0
   m_Name: Wall (18)
   m_TagString: Untagged
@@ -598,6 +625,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!65 &308530918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308530912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &374350042
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +649,7 @@ GameObject:
   - component: {fileID: 374350045}
   - component: {fileID: 374350043}
   - component: {fileID: 374350044}
+  - component: {fileID: 374350048}
   m_Layer: 0
   m_Name: Wall (17)
   m_TagString: Untagged
@@ -703,6 +743,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!65 &374350048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374350042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &384819150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1116,7 @@ GameObject:
   - component: {fileID: 423831403}
   - component: {fileID: 423831402}
   - component: {fileID: 423831401}
+  - component: {fileID: 423831406}
   m_Layer: 0
   m_Name: Wall (16)
   m_TagString: Untagged
@@ -1157,6 +1210,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!65 &423831406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423831400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &535046000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1319,7 @@ GameObject:
   - component: {fileID: 664236789}
   - component: {fileID: 664236788}
   - component: {fileID: 664236787}
+  - component: {fileID: 664236792}
   m_Layer: 0
   m_Name: Wall (19)
   m_TagString: Untagged
@@ -1347,6 +1413,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!65 &664236792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664236786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &819677075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,8 +1923,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443364958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 2.5, z: 100.5}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 7, y: 2.5, z: 100.5}
+  m_LocalScale: {x: 4, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -2046,7 +2124,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778905214}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2118,6 +2196,7 @@ GameObject:
   - component: {fileID: 1820596695}
   - component: {fileID: 1820596693}
   - component: {fileID: 1820596694}
+  - component: {fileID: 1820596698}
   m_Layer: 0
   m_Name: Wall (15)
   m_TagString: Untagged
@@ -2211,6 +2290,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!65 &1820596698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820596692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1939071319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2865,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047358691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d5073815021beba48b7774a4b511d7ff, type: 2}
   m_CullingMode: 0
