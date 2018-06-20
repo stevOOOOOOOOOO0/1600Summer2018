@@ -53,7 +53,7 @@ public class MaterialColorChange : MonoBehaviour {
 		}
 
 		count += 5;
-		colorStart = new Color(red, green, blue, 255);
+		colorStart = new Color(red, green, blue, 1);
 		mat.color = colorStart;
 		
 		/************************************

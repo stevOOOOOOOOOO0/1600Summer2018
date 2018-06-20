@@ -8,10 +8,10 @@ public class MoveCharacter : MonoBehaviour {
 	// initilization of all variables
     private CharacterController controller;
 	private Vector3 newPosition;
-	public float Speed = 10.0f;
+	private float Speed = 10.0f;
 	private float gravity = -2.0f;
     
-	// Use this for initialization
+	// Use this for initialization M
 	void Start () {
 		controller = GetComponent<CharacterController>();
 	}
@@ -20,13 +20,12 @@ public class MoveCharacter : MonoBehaviour {
 	void Update ()
 	{
 		// this is the Jump section y axiz
-		if (Input.GetAxis("Jump") != 0f && controller.isGrounded)
-			newPosition.y = (Input.GetAxis("Jump") * 30);
+		if (Input.GetAxis("Jump") != 0.0f && controller.isGrounded)
+			newPosition.y = (Input.GetAxis("Jump") * 40);
 		else if (controller.isGrounded == false)
 			newPosition.y += gravity;
 		else
 			newPosition.y = gravity;
-		
 		//this is the rest of the moving funcitons x and z axis
 		Speed += .01f;
 		newPosition.z = Speed;
