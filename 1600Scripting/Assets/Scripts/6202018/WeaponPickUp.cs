@@ -8,7 +8,7 @@ public class WeaponPickUp : MonoBehaviour
 
 	private void OnTriggerEnter(Collider obj)
 	{
-		Collection.CollectWeapon(obj.GetComponent<WeaponObject>());
-		Debug.Log(obj.GetComponent<WeaponObject>());
+		Collection.CollectWeapon(obj.GetComponent<WeaponHolder>().currentWeapon);
+		Debug.Log(obj.GetComponent<WeaponHolder>().currentWeapon);
 	}
 }
