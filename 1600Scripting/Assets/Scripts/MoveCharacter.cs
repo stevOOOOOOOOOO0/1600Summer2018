@@ -32,6 +32,13 @@ public class MoveCharacter : MonoBehaviour {
 		
 		//all of the movement is applied to the character controller here
 		controller.Move(newPosition  * Time.deltaTime);
+		FixAbilities();
+	}
+
+	// this should update the Active abilities
+	private void FixAbilities()
+	{
+		
 	}
 }
  

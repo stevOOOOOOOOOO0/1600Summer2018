@@ -9,9 +9,14 @@ public class Ammo : MonoBehaviour {
    public FloatData ProjectileUpgrade;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
       projectile = GetComponent<Rigidbody>();
       projectile.AddForce(0, 0, ProjectileSpeed.GetValue());
+	  Invoke("DeactivateObject", 2);
+	}
+
+	private void DeactivateObject(){
+		gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
