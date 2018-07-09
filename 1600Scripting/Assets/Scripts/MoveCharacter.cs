@@ -26,8 +26,7 @@ public class MoveCharacter : MonoBehaviour {
 		else
 			newPosition.y = gravity;
 		//this is the rest of the moving funcitons x and z axis
-		Speed += .01f;
-		newPosition.z = Speed;
+		newPosition.z = Speed * Input.GetAxis("Vertical");
 		newPosition.x = Speed * Input.GetAxis("Horizontal");
 		
 		//all of the movement is applied to the character controller here

@@ -23,6 +23,9 @@
           <e p="722018" t="Include">
             <e p="WhileLoops.cs" t="Include" />
           </e>
+          <e p="792018" t="Include">
+            <e p="AIMovement.cs" t="Include" />
+          </e>
           <e p="Animals" t="Include">
             <e p="Animal.cs" t="Include" />
             <e p="Animal2.cs" t="Include" />
@@ -44,6 +47,7 @@
             <e p="PowerUpBase.cs" t="Include" />
             <e p="PowerUpBehaviour.cs" t="Include" />
           </e>
+          <e p="WallForward.cs" t="Include" />
           <e p="WallMovement.cs" t="Include" />
         </e>
       </e>
