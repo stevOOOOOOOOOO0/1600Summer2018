@@ -10,11 +10,13 @@ public class AIMovement : MonoBehaviour
 
 	private NavMeshAgent Agent;
 	public Transform Destination;
+	public AIControl config;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		Agent = GetComponent<NavMeshAgent>();
+		config.ConfigAI(Agent);
 	}
 	
 	// Update is called once per frame
