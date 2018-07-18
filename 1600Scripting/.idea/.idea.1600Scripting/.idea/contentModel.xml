@@ -27,8 +27,10 @@
           </e>
           <e p="7182018" t="Include">
             <e p="CoinUI.cs" t="Include" />
+            <e p="FireMissle.cs" t="Include" />
             <e p="IntData.cs" t="Include" />
             <e p="MissleLauncher.cs" t="Include" />
+            <e p="TransformData.cs" t="Include" />
           </e>
           <e p="722018" t="Include">
             <e p="WhileLoops.cs" t="Include" />

@@ -7,7 +7,7 @@ public class MissleLauncher : MonoBehaviour
 {
 
 	private CharacterController Missle;
-	public Transform Destination;
+	public TransformData Destination;
 	private Vector3 movement;
 	private float speed = 1f;
 	
@@ -27,27 +27,27 @@ public class MissleLauncher : MonoBehaviour
 
 	private void getMovement()
 	{
-		if (Missle.transform.position.x < Destination.position.x && movement.x < 10)
+		if (Missle.transform.position.x < Destination.Value.x && movement.x < 10)
 		{
 			movement.x += speed;
 		}
-		else if (Missle.transform.position.x > Destination.position.x && movement.x > -10)
+		else if (Missle.transform.position.x > Destination.Value.x && movement.x > -10)
 		{
 			movement.x -= speed;
 		}
-		if (Missle.transform.position.y < Destination.position.y && movement.y < 10)
+		if (Missle.transform.position.y < Destination.Value.y && movement.y < 5)
 		{
 			movement.y += speed;
 		}
-		else if (Missle.transform.position.y > Destination.position.y && movement.y > -10)
+		else if (Missle.transform.position.y > Destination.Value.y && movement.y > -5)
 		{
 			movement.y -= speed;
 		}
-		if (Missle.transform.position.z < Destination.position.z && movement.z < 10)
+		if (Missle.transform.position.z < Destination.Value.z && movement.z < 10)
 		{
 			movement.z += speed;
 		}
-		else if (Missle.transform.position.z > Destination.position.z && movement.z > -10)
+		else if (Missle.transform.position.z > Destination.Value.z && movement.z > -10)
 		{
 			movement.z -= speed;
 		}

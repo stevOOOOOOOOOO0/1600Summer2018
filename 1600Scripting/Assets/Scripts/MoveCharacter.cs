@@ -9,6 +9,7 @@ public class MoveCharacter : MonoBehaviour {
 	private Vector3 newPosition;
 	private float Speed = 10.0f;
 	private float gravity = -2.0f;
+	public TransformData Position;
     
 	// Use this for initialization M
 	void Start () {
@@ -18,6 +19,7 @@ public class MoveCharacter : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		
 		// this is the Jump section y axiz
 		if (Input.GetAxis("Jump") != 0.0f && controller.isGrounded)
 			newPosition.y = (Input.GetAxis("Jump") * 20);
@@ -25,6 +27,7 @@ public class MoveCharacter : MonoBehaviour {
 			newPosition.y += gravity;
 		else
 			newPosition.y = gravity;
+		
 		//this is the rest of the moving funcitons x and z axis
 		newPosition.z = Speed * Input.GetAxis("Vertical");
 		newPosition.x = Speed * Input.GetAxis("Horizontal");
@@ -32,6 +35,9 @@ public class MoveCharacter : MonoBehaviour {
 		//all of the movement is applied to the character controller here
 		controller.Move(newPosition  * Time.deltaTime);
 		FixAbilities();
+		
+		//gives the position for missles to track
+		Position.Value = controller.transform.position;
 	}
 
 	// this should update the Active abilities
