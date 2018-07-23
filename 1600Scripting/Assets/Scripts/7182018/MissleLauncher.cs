@@ -6,50 +6,53 @@ using UnityEngine;
 public class MissleLauncher : MonoBehaviour
 {
 
-	private CharacterController Missle;
+	//the TransformData is a scriptable object
+	private CharacterController missle;
 	public TransformData Destination;
-	private Vector3 movement;
-	private float speed = 1f;
+	//private Vector3 movement;
+	//private float speed = 1f;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		Missle = GetComponent<CharacterController>();
-		movement = new Vector3(10, 10, -10);
+		missle = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		Missle.Move(movement * Time.deltaTime);
-		getMovement();
+		missle.transform.Translate(missle.transform.forward * 10 * Time.deltaTime);
+		missle.transform.LookAt(Destination.Value);
 	}
-
-	private void getMovement()
+	
+	/*private void getMovement()
 	{
-		if (Missle.transform.position.x < Destination.Value.x && movement.x < 10)
+		
+		
+		
+		if (missle.transform.position.x < Destination.Value.x && movement.x < 10)
 		{
 			movement.x += speed;
 		}
-		else if (Missle.transform.position.x > Destination.Value.x && movement.x > -10)
+		else if (missle.transform.position.x > Destination.Value.x && movement.x > -10)
 		{
 			movement.x -= speed;
 		}
-		if (Missle.transform.position.y < Destination.Value.y && movement.y < 5)
+		if (missle.transform.position.y < Destination.Value.y && movement.y < 5)
 		{
 			movement.y += speed;
 		}
-		else if (Missle.transform.position.y > Destination.Value.y && movement.y > -5)
+		else if (missle.transform.position.y > Destination.Value.y && movement.y > -5)
 		{
 			movement.y -= speed;
 		}
-		if (Missle.transform.position.z < Destination.Value.z && movement.z < 10)
+		if (missle.transform.position.z < Destination.Value.z && movement.z < 10)
 		{
 			movement.z += speed;
 		}
-		else if (Missle.transform.position.z > Destination.Value.z && movement.z > -10)
+		else if (missle.transform.position.z > Destination.Value.z && movement.z > -10)
 		{
 			movement.z -= speed;
 		}
-	}
+	}*/
 }
