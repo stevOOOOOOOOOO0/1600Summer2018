@@ -7,7 +7,7 @@ public class MoveCharacter : MonoBehaviour {
 	// initilization of all variables
     private CharacterController controller;
 	private Vector3 newPosition;
-	private float Speed = 10.0f;
+	private float Speed = 20.0f;
 	private float gravity = -2.0f;
     
 	// Use this for initialization M
