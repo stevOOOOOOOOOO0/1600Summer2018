@@ -9,7 +9,6 @@ public class MoveCharacter : MonoBehaviour {
 	private Vector3 newPosition;
 	private float Speed = 10.0f;
 	private float gravity = -2.0f;
-	public TransformData Position;
     
 	// Use this for initialization M
 	void Start () {
@@ -35,9 +34,6 @@ public class MoveCharacter : MonoBehaviour {
 		//all of the movement is applied to the character controller here
 		controller.Move(newPosition  * Time.deltaTime);
 		FixAbilities();
-		
-		//gives the position for missles to track
-		Position.Value = controller.transform.position;
 	}
 
 	// this should update the Active abilities
