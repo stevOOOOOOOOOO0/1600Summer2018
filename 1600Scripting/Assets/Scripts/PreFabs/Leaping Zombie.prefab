@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 65491399654328520}
   - component: {fileID: 195789301465035934}
   - component: {fileID: 114833155549238746}
+  - component: {fileID: 143636978218214642}
   m_Layer: 0
-  m_Name: AI
+  m_Name: Leaping Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1740756854027312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 2.69}
+  m_LocalPosition: {x: 34.5, y: 0.5, z: 33.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1fc1e5f52cfe2b5408f639b326172553, type: 2}
+  - {fileID: 2100000, guid: 26037efa41ed15149a4adadb896f628e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +111,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destination: {fileID: 0}
-  config: {fileID: 11400000, guid: 4491415f5e7ed554db57c0b3bc57b757, type: 2}
+--- !u!143 &143636978218214642
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740756854027312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195789301465035934
 NavMeshAgent:
   m_ObjectHideFlags: 1

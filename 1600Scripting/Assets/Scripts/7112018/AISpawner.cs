@@ -10,10 +10,12 @@ public class AISpawner : MonoBehaviour
 	public Transform Destination;
 	public Level CurrentLevel;
 	private int aiCount;
+	private Transform startingLocation;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		startingLocation = GetComponent<Transform>();
 		aiCount = CurrentLevel.AICount;
 		StartCoroutine(StartSpawn());
 	}
@@ -24,6 +26,7 @@ public class AISpawner : MonoBehaviour
 		{
 			//Spawn Zombie
 			GameObject newAI = Instantiate(AI);
+			AI.transform.position = startingLocation.position;
 			newAI.GetComponent<AIMovement>().Destination = Destination;
 			yield return new WaitForSeconds(CurrentLevel.Time);
 			aiCount--;
