@@ -6,6 +6,6 @@ using UnityEngine;
 public class TransformData : ScriptableObject
 {
 
-	public Vector3 Value;
+	public Transform Value;
 
 }
