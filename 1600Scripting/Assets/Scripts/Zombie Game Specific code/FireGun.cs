@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class FireGun : MonoBehaviour
 {
-	public Transform playerPosition;
+	public Transform PlayerPosition;
 	public GameObject Bullet;
 	private bool canFire;
 
 	void Start()
 	{
-		playerPosition = GetComponent<Transform>();
+		PlayerPosition = GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
@@ -19,8 +19,9 @@ public class FireGun : MonoBehaviour
 	{
 		while (canFire)
 		{
-			GameObject newBullet = Instantiate(Bullet, playerPosition.position, playerPosition.rotation);
-			yield return new WaitForSeconds(.5f);
+			GameObject newBullet = Instantiate(Bullet, PlayerPosition.position, PlayerPosition.rotation);
+			newBullet.GetComponent<Rigidbody>().velocity = PlayerPosition.forward * 100;
+			yield return new WaitForSeconds(.05f);
 		}
 	}
 

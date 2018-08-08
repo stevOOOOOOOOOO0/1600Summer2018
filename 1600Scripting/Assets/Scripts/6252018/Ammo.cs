@@ -10,12 +10,19 @@ public class Ammo : MonoBehaviour
 	// Use this for initialization
 	void OnEnable () 
 	{
-		projectile = GetComponent<Rigidbody>();
-		projectile.AddForce(Vector3.forward * 100);
 		Invoke("DeactivateObject", 2);
 	}
 
 	private void DeactivateObject(){
 		gameObject.SetActive(false);
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		DeactivateObject();
+//		if (other.tag == "Zombie")
+//		{
+//			//this will create zombies
+//		}
 	}
 }

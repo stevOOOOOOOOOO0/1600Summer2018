@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - Zombie
+  - Bullet
   layers:
   - Default
   - TransparentFX

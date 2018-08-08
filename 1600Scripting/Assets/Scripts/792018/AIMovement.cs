@@ -22,4 +22,11 @@ public class AIMovement : MonoBehaviour
 	{
 		Agent.destination = Destination.position;
 	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		
+		gameObject.SetActive(false);
+		Debug.Log("Destroy this jones");
+	}
 }
