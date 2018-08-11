@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireMissle : MonoBehaviour
 {
 
-	public GameObject Missle;
+/**	public GameObject Missle;
 
 	// Use this for initialization
 	void Start ()
@@ -21,5 +21,5 @@ public class FireMissle : MonoBehaviour
 			GameObject newMissle = Instantiate(Missle);
 			yield return new WaitForSeconds(5);
 		}
-	}
+	}*/
 }

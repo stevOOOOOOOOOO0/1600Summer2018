@@ -25,8 +25,6 @@ public class AIMovement : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		
 		gameObject.SetActive(false);
-		Debug.Log("Destroy this jones");
 	}
 }

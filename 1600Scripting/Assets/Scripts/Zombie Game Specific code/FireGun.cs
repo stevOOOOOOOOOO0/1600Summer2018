@@ -27,12 +27,10 @@ public class FireGun : MonoBehaviour
 
 	private void Update()
 	{
-		
-		if (Input.GetAxis("Fire1") == 0f)
+
+		if (Input.GetAxis("Fire1") == 0f) 
 			canFire = false;
-		else if (canFire)
-			return;
-		if (Input.GetAxis("Fire1") != 0f)
+		else if (Input.GetAxis("Fire1") != 0f && !canFire)
 		{
 			canFire = true;
 			StartCoroutine(FireBullets());

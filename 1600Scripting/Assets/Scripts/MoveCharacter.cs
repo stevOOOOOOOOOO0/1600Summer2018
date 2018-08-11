@@ -7,11 +7,13 @@ public class MoveCharacter : MonoBehaviour {
 	// initilization of all variables
     private CharacterController controller;
 	private Vector3 newPosition;
-	private float Speed = 20.0f;
+	private float Speed;
     
 	// Use this for initialization M
 	void Start () {
 		controller = GetComponent<CharacterController>();
+		controller.transform.position = (new Vector3(0, 1.08f, 0));
+		Speed = 20.0f;
 	}
 	
 	// Update is called once per frame
@@ -24,12 +26,15 @@ public class MoveCharacter : MonoBehaviour {
 		
 		//all of the movement is applied to the character controller here
 		controller.Move(newPosition  * Time.deltaTime);
-		FixAbilities();
 	}
 
 	// this should update the Active abilities
-	private void FixAbilities()
+	private void OnTriggerEnter(Collider other)
 	{
-		
+		if (other.tag == "Ammo")
+		{
+			Speed += 5f;
+		}
+		other.gameObject.SetActive(false);
 	}
 }
